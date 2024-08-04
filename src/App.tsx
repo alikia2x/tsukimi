@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import ErrorPage from './error-page.tsx';
-import Homepage from './routes/Homepage.tsx';
-import MainPage from './routes/MainPage.tsx';
-import WelcomePage from './routes/Welcome.tsx';
+import ErrorPage from 'routes/error-page.tsx';
+import Homepage from 'routes/Homepage.tsx';
+import MainPage from 'routes/MainPage.tsx';
+import WelcomePage from 'routes/Welcome.tsx';
 
 const router = createBrowserRouter([
 	{

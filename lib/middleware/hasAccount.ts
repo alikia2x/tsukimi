@@ -1,4 +1,4 @@
-import { accountsStateAtom } from "../states/accounts.state"
+import { accountsStateAtom } from "lib/states/accounts.state"
 
 export default function hasAccount() {
 	const accounts = accountsStateAtom.read();
