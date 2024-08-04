@@ -1,5 +1,5 @@
 import { Navigate } from 'react-router-dom';
-import hasAccount from '../lib/middleware/hasAccount.ts';
+import hasAccount from 'lib/middleware/hasAccount.ts';
 
 export default function MainPage() {
 	if (hasAccount()) {
