@@ -1,7 +1,7 @@
 export interface StoredAccount {
+	id: string;
 	username: string;
 	host: string;
-	id: string;
 	serverSoftware: "mastodon" | "misskey";
 	token: string;
 }

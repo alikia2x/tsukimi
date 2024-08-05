@@ -1,9 +1,7 @@
-import { useAtom } from "jotai";
-import { accountsStateAtom } from "lib/states/accounts.state"
+import getAccounts from 'lib/db/accounts/readAccounts';
 
-export default function hasAccount() {
-	const [accounts, setAccounts] = useAtom(accountsStateAtom)
-	if (accounts.length < 1) {
-
-	}
+export default async function hasAccount() {
+	return getAccounts().then((accounts) => {
+		return accounts.length > 0;
+	});
 }
