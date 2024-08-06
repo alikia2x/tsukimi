@@ -3,6 +3,7 @@ import ErrorPage from 'routes/ErrorPage';
 import Homepage from 'routes/Homepage.tsx';
 import MainPage from 'routes/MainPage.tsx';
 import WelcomePage from 'routes/Welcome.tsx';
+import "./i18n";
 
 const router = createBrowserRouter([
 	{

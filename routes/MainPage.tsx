@@ -15,7 +15,7 @@ export default function MainPage() {
 	}, []);
 
 	if (accountState === null) {
-		return <LoadingPage />;
+		return <LoadingPage/>;
 	} else if (accountState === true) {
 		return <Navigate to="/home" />;
 	} else {
