@@ -1,5 +1,12 @@
 {
+	"tsukimi": "望月",
 	"welcome": {
-		"title": "欢迎使用"
+		"title": "欢迎使用",
+		"desc": "你的终极联邦宇宙客户端。一起加入这个去中心化社交网络！",
+		"login": "登录账户",
+		"instance-url": "实例地址",
+		"what-is-instance-url": "实例地址是你注册账号的实例（服务器）的网址（URL）。",
+		"no-account": "没有账户？",
+		"quick-manual-for-you": "这里是为您准备的新手指南！"
 	}
 }

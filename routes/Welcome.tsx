@@ -10,8 +10,8 @@ const TITLE_ANIMATION_CONFIG = {
 
 const WELCOME_ANIMATION_INTERVAL = 150;
 const WELCOME_ANIMATION_CONFIG = {
-	tension: 80,
-	friction: 14
+	tension: 160,
+	friction: 18
 };
 
 function WelcomeMessage() {
@@ -47,21 +47,39 @@ function WelcomeMessage() {
 }
 
 function Login() {
+	const { t } = useTranslation();
 	return (
-		<div>
-			<h2 className="text-3xl my-2 font-semibold">Login to your account</h2>
-			<p className="text-xl font-bold my-3">Instance URL:</p>
-			<div className="relative h-12 w-96 duration-150 bg-zinc-400 flex dark:bg-[#1F2021] rounded-md px-2 outline-none">
-				<span className="relative h-full flex items-center text-neutral-500 dark:text-neutral-400 font-mono">
+		<div className="mb-10">
+			<h2 className="text-3xl my-2 font-medium">{t("welcome.login")}</h2>
+			<p className="text-lg font-bold mt-4 mb-1 uppercase">{t("welcome.instance-url")}</p>
+			<div className="relative h-12 xl:w-[32rem] duration-150 bg-[#F1F2F3] flex dark:bg-[#1F2021] rounded-md px-4 outline-none">
+				<span className="relative h-full flex items-center text-zinc-500 dark:text-neutral-400 font-mono">
 					https://
 				</span>
-				<input className="relative h-full grow outline-none bg-transparent border-none font-mono ml-[1px]" />
+				<input
+					className="relative h-full grow outline-none bg-transparent border-none font-mono ml-[1px]"
+					placeholder="example.com"
+				/>
 			</div>
+			<p className="mt-2 text-[15px] font-semibold text-zinc-600 dark:text-zinc-300">
+				{t("welcome.what-is-instance-url")}
+			</p>
 		</div>
 	);
 }
 
-export default function WelcomePage() {
+function Join() {
+	const { t } = useTranslation();
+	return (
+		<div>
+			<h2 className="text-3xl my-2">{t("welcome.no-account")}</h2>
+			<p className="text-xl my-3">{t("welcome.quick-manual-for-you")}</p>
+		</div>
+	);
+}
+
+function Tsukimi() {
+	const { t } = useTranslation();
 	const [titleAnimationProps] = useSpring(
 		() => ({
 			from: { y: "1rem", opacity: 0 },
@@ -71,11 +89,22 @@ export default function WelcomePage() {
 		}),
 		[]
 	);
+	return (
+		<animated.h1 className="relative flex items-center text-5xl font-light mt-6" style={{ ...titleAnimationProps }}>
+			<img src="/android-chrome-192x192.png" className="inline-block h-12 mr-3" />
+			<span>{t("tsukimi")}</span>
+		</animated.h1>
+	);
+}
+
+export default function WelcomePage() {
+	const { t } = useTranslation();
+
 	const [descriptionAnimationProps] = useSpring(
 		() => ({
-			from: { y: "0.7rem", opacity: 0 },
+			from: { y: "0.85rem", opacity: 0 },
 			to: { y: "0rem", opacity: 1 },
-			delay: 3.5 * WELCOME_ANIMATION_INTERVAL + ANIMATION_START_DELAY,
+			delay: 3 * WELCOME_ANIMATION_INTERVAL + ANIMATION_START_DELAY,
 			config: WELCOME_ANIMATION_CONFIG
 		}),
 		[]
@@ -84,23 +113,22 @@ export default function WelcomePage() {
 		() => ({
 			from: { y: "0.7rem", opacity: 0 },
 			to: { y: "0rem", opacity: 1 },
-			delay: 6 * WELCOME_ANIMATION_INTERVAL + ANIMATION_START_DELAY,
+			delay: 5 * WELCOME_ANIMATION_INTERVAL + ANIMATION_START_DELAY,
 			config: WELCOME_ANIMATION_CONFIG
 		}),
 		[]
 	);
 	return (
 		<div className="relative flex justify-center">
-			<div className="relative w-11/12 md:w-4/5 lg:w-3/4 xl:w-1/2 pt-20">
+			<div className="relative w-11/12 md:w-4/5 lg:w-3/4 xl:w-1/2 pt-12 xl:pt-20">
 				<WelcomeMessage />
-				<animated.h1 className="relative text-5xl font-light mt-6" style={{ ...titleAnimationProps }}>
-					🌙 Tsukimi
-				</animated.h1>
-				<animated.p className="relative text-xl font-light mt-6" style={{ ...descriptionAnimationProps }}>
-					Your all-in-one Fediverse client. Join this decentralized social network now!
+				<Tsukimi />
+				<animated.p className="relative text-xl mt-6" style={{ ...descriptionAnimationProps }}>
+					{t("welcome.desc")}
 				</animated.p>
 				<animated.div className="relative mt-6 flex flex-col" style={{ ...LoginAnimationProps }}>
 					<Login />
+					<Join />
 				</animated.div>
 			</div>
 		</div>

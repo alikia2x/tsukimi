@@ -16,7 +16,7 @@ export default function PlainProgress(props: { min?: number; max?: number; curre
 
 	return (
 		<div
-			className="flex w-full h-1.5 bg-gray-400 rounded-full overflow-hidden dark:bg-neutral-600"
+			className="flex w-full h-1.5 bg-neutral-300 rounded-full overflow-hidden dark:bg-neutral-600"
 			role="progressbar"
 			aria-valuenow={current}
 			aria-valuemin={min}

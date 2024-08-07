@@ -1,12 +1,94 @@
 <!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>tsukimi</title>
-</head>
-<body>
-<div id="root"></div>
-<script type="module" src="/src/main.tsx"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>tsukimi</title>
+	</head>
+	<body>
+		<style>
+			body {
+				margin: 0;
+			}
+			.relative {
+				position: relative;
+			}
+			.bg-white {
+				background-color: white;
+			}
+			.w-screen {
+				width: 100vw;
+			}
+			.h-screen {
+				height: 100vh;
+			}
+			.flex {
+				display: flex;
+			}
+			.items-center {
+				align-items: center;
+			}
+			.w-full {
+				width: 100%;
+			}
+			.flex-col {
+				flex-direction: column;
+			}
+			.justify-center {
+				justify-content: center;
+			}
+			.text-3xl {
+				font-size: 1.875rem /* 30px */;
+				line-height: 2.25rem /* 36px */;
+			}
+			.font-extralight {
+				font-weight: 200;
+			}
+			.uppercase {
+				text-transform: uppercase;
+			}
+			.opacity-0 {
+				opacity: 0;
+			}
+			.duration-500 {
+				transition-duration: .5s;
+			}
+			.font-sans {
+				font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+					"Segoe UI Symbol", "Noto Color Emoji";
+			}
+			@media (prefers-color-scheme: dark) {
+				.dark\:bg-black {
+					background-color: black;
+				}
+				.dark\:text-white {
+					color: white;
+				}
+			}
+			@media (min-width: 1024px) {
+				.lg\:text-4xl {
+					font-size: 2.25rem /* 36px */;
+					line-height: 2.5rem /* 40px */;
+				}
+			}
+		</style>
+
+		<div id="root">
+			<script>
+				setTimeout(() => {
+					document.getElementById("loading-content").style.opacity = "1";
+				}, 500);
+			</script>
+			<div class="relative bg-white dark:bg-black dark:text-white w-screen font-sans">
+				<div class="relative h-screen flex items-center opacity-0 duration-500" id="loading-content">
+					<div class="relative w-full flex flex-col justify-center items-center">
+						<h1 class="text-3xl lg:text-4xl font-extralight uppercase" style="letter-spacing: 0.2rem">
+							🌙&nbsp;tsukimi
+						</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="module" src="/src/main.tsx"></script>
+	</body>
 </html>

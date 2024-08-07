@@ -1,0 +1,12 @@
+{
+	"tsukimi": "望月",
+	"welcome": {
+		"title": "歡迎使用",
+		"desc": "你的終極聯邦宇宙客戶端。一起加入這個去中心化社交網絡！",
+		"login": "登入帳號",
+		"instance-url": "實例位址",
+		"what-is-instance-url": "實例位址是你註冊帳號的實例（伺服器）的網址（URL）。",
+		"no-account": "沒有帳號？",
+		"quick-manual-for-you": "這裡是為您準備的新手指南！"
+	}
+}

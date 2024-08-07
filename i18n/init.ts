@@ -1,5 +1,6 @@
 import * as en_US from "i18n/en_US.json";
 import * as zh_Hans from "i18n/zh_Hans.json";
+import * as zh_Hant from "i18n/zh_Hant.json";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
@@ -15,6 +16,12 @@ i18n.use(initReactI18next)
 			},
 			"zh-CN": {
 				translation: zh_Hans
+			},
+			"zh-TW": {
+				translation: zh_Hant
+			},
+			"zh-HK": {
+				translation: zh_Hant
 			}
 		},
 		fallbackLng: "en-US",

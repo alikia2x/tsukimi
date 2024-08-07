@@ -1,7 +1,6 @@
 import { Navigate } from 'react-router-dom';
 import hasAccount from 'lib/middleware/hasAccount.ts';
 import { useEffect, useState } from 'react';
-import LoadingPage from './LoadingPage';
 
 export default function MainPage() {
 	const [accountState, setAccountState] = useState<null | boolean>(null);
@@ -14,9 +13,7 @@ export default function MainPage() {
 		getAccountState();
 	}, []);
 
-	if (accountState === null) {
-		return <LoadingPage/>;
-	} else if (accountState === true) {
+	if (accountState === true) {
 		return <Navigate to="/home" />;
 	} else {
 		return <Navigate to="/welcome" />;
