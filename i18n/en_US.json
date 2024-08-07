@@ -7,6 +7,9 @@
 		"instance-url": "Instance URL",
 		"what-is-instance-url": "Instance URL is the URL of the instance (server) where your account is registered.",
 		"no-account": "Don't have an account yet?",
-		"quick-manual-for-you": "Here's a brief manual for you!"
+		"quick-manual-for-you": "Here's a brief manual for you!",
+		"manual": {
+			"title": "Tutorial to Fediverse"
+		}
 	}
 }

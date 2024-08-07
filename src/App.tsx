@@ -2,10 +2,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "routes/ErrorPage";
 import Homepage from "routes/Homepage.tsx";
 import MainPage from "routes/MainPage.tsx";
-import WelcomePage from "routes/Welcome.tsx";
 import "i18n/init";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
+import { WelcomePageRouteConfig } from "routes/welcome/config";
 
 const router = createBrowserRouter([
 	{
@@ -17,10 +17,7 @@ const router = createBrowserRouter([
 		path: "home",
 		element: <Homepage />
 	},
-	{
-		path: "welcome",
-		element: <WelcomePage />
-	}
+	...WelcomePageRouteConfig
 ]);
 
 function App() {
