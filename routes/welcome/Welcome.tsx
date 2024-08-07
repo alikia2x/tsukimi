@@ -51,7 +51,7 @@ function WelcomeMessage() {
 function Login() {
 	const { t } = useTranslation();
 	return (
-		<div className="mb-10 flex flex-col items-center">
+		<div className="mb-10 flex flex-col ">
 			<h2 className="text-3xl my-2 font-semibold">{t("welcome.login")}</h2>
 			<p className="text-lg font-bold mt-4 mb-1 uppercase">{t("welcome.instance-url")}</p>
 			<div className="relative h-12 xl:w-[32rem] duration-150 bg-[#F1F2F3] flex dark:bg-[#1F2021] rounded-md px-4 outline-none">
@@ -73,7 +73,7 @@ function Login() {
 function Join() {
 	const { t } = useTranslation();
 	return (
-		<div className="flex flex-col items-center md:mb-24">
+		<div className="flex flex-col mb-24">
 			<h2 className="text-3xl my-2 font-semibold">{t("welcome.no-account")}</h2>
 			<div className="relative mt-4 text-xl text-yellow-500 decoration-dotted underline">
 				<Link to="/welcome/manual">{t("welcome.quick-manual-for-you")}</Link>
@@ -94,7 +94,7 @@ function Tsukimi() {
 		[]
 	);
 	return (
-		<animated.h1 className="relative flex items-center text-5xl font-light mt-6" style={{ ...titleAnimationProps }}>
+		<animated.h1 className="relative flex  text-5xl font-light mt-6" style={{ ...titleAnimationProps }}>
 			<img src="/android-chrome-192x192.png" className="inline-block h-12 w-12 mr-3" />
 			{/* A small margin-right is added to keep visual balance */}
 			<span className="mr-3 ">{t("tsukimi")}</span>
@@ -130,7 +130,7 @@ export default function WelcomePage() {
 			<animated.p className="relative text-xl mt-6" style={{ ...descriptionAnimationProps }}>
 				{t("welcome.desc")}
 			</animated.p>
-			<animated.div className="relative mt-16 flex flex-col items-center" style={{ ...LoginAnimationProps }}>
+			<animated.div className="relative mt-16 flex flex-col " style={{ ...LoginAnimationProps }}>
 				<Login />
 				<Join />
 			</animated.div>
