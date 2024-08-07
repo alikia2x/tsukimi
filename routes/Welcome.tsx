@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { animated, useSpring, useSprings } from "@react-spring/web";
 
-const TITLE_ANIMATION_INTERVAL = 125;
-const ANIMATION_START_DELAY = 600;
+const TITLE_ANIMATION_INTERVAL = 150;
+const ANIMATION_START_DELAY = 100;
 const TITLE_ANIMATION_CONFIG = {
 	tension: 90,
 	friction: 16
@@ -22,7 +22,7 @@ function WelcomeMessage() {
 		(index) => ({
 			from: { y: "1rem", opacity: 0 },
 			to: { y: "0rem", opacity: 1 },
-			delay: TITLE_ANIMATION_INTERVAL * index + ANIMATION_START_DELAY,
+			delay: TITLE_ANIMATION_INTERVAL * index,
 			config: TITLE_ANIMATION_CONFIG
 		}),
 		[]

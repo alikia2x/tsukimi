@@ -1,0 +1,12 @@
+{
+	"tsukimi": "月見",
+	"welcome": {
+		"title": "ようこそ",
+		"desc": "あなたのオールインワンFediverseクライアント。今すぐこの分散型ソーシャルネットワークに参加しましょう！",
+		"login": "アカウントにログインする",
+		"instance-url": "インスタンスURL",
+		"what-is-instance-url": "インスタンスURLは、あなたのアカウントが登録されているインスタンス（サーバー）のURLです。",
+		"no-account": "まだアカウントをお持ちでないですか？",
+		"quick-manual-for-you": "こちらが簡単なマニュアルです！"
+	}
+}

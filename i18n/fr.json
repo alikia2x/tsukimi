@@ -1,0 +1,12 @@
+{
+	"tsukimi": "tsukimi",
+	"welcome": {
+		"title": "Bienvenue à",
+		"desc": "Votre client Fediverse tout-en-un. Rejoignez ce réseau social décentralisé dès maintenant !",
+		"login": "Connectez-vous à votre compte",
+		"instance-url": "URL de l'instance",
+		"what-is-instance-url": "L'URL de l'instance est l'URL du serveur où votre compte est enregistré.",
+		"no-account": "Vous n'avez pas encore de compte ?",
+		"quick-manual-for-you": "Voici un manuel rapide pour vous !"
+	}
+}

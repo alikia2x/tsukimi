@@ -1,4 +1,7 @@
 import * as en_US from "i18n/en_US.json";
+import * as ja from "i18n/ja.json";
+import * as es from "i18n/es.json";
+import * as fr from "i18n/fr.json";
 import * as zh_Hans from "i18n/zh_Hans.json";
 import * as zh_Hant from "i18n/zh_Hant.json";
 import i18n from "i18next";
@@ -22,6 +25,15 @@ i18n.use(initReactI18next)
 			},
 			"zh-HK": {
 				translation: zh_Hant
+			},
+			"ja": {
+				translation: ja
+			},
+			"es": {
+				translation: es
+			},
+			"fr": {
+				translation: fr
 			}
 		},
 		fallbackLng: "en-US",
@@ -37,7 +49,7 @@ i18n.use(initReactI18next)
 		}
 	});
 
-const setLanguage = (targetLng: "en_US" | "zh_Hans") => {
+const setLanguage = (targetLng: "en_US" | "zh_Hans" | "zh_Hant" | "ja" | "es" | "fr") => {
 	localStorage.setItem("i18nextLng", targetLng);
 };
 
