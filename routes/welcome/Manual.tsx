@@ -6,6 +6,7 @@ import anchor from "markdown-it-anchor";
 
 import { useEffect, useState } from "react";
 import LanguageSelector from "components/LanguageSelector";
+import { Helmet } from "react-helmet";
 
 export default function ManualPage() {
 	const { t } = useTranslation();
@@ -24,6 +25,9 @@ export default function ManualPage() {
 
 	return (
 		<Template>
+			<Helmet>
+				<title>{t("welcome.manual.title")}</title>
+			</Helmet>
 			<div className="absolute max-w-full w-56 flex items-center self-end">
 				<span className="text-3xl mr-3">🌍</span>
 				<LanguageSelector avaliableLanguages={["zh-CN", "en-US", "zh-TW"].sort()} className="w-full"/>

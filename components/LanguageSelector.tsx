@@ -14,7 +14,8 @@ interface CodeToNameMapType {
 export default function LanguageSelector(props: LanguageSelectorProps) {
 	const { i18n } = useTranslation();
 	const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
-	const [languages] = useState(props.avaliableLanguages ?? i18n.languages);
+	const {avaliableLanguages, ...rest} = props;
+	const [languages] = useState(avaliableLanguages ?? i18n.languages);
 
 	const codeToNameMap: CodeToNameMapType = {};
 	for (const lng of languages) {
@@ -30,7 +31,7 @@ export default function LanguageSelector(props: LanguageSelectorProps) {
 			currentValue={currentLanguage}
 			valueOnChange={(event) => setCurrentLanguage(event.currentTarget.value)}
 			data={codeToNameMap}
-			{...props}
+			{...rest}
 		/>
 	);
 }
