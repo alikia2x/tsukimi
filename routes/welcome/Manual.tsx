@@ -28,7 +28,7 @@ export default function ManualPage() {
 			<Helmet>
 				<title>{t("welcome.manual.title")}</title>
 			</Helmet>
-			<div className="absolute max-w-full w-56 flex items-center self-end">
+			<div className="relative md:absolute max-w-full w-56 flex items-center self-end">
 				<span className="text-3xl mr-3">🌍</span>
 				<LanguageSelector avaliableLanguages={["zh-CN", "en-US", "zh-TW"].sort()} className="w-full"/>
 			</div>
