@@ -18,7 +18,7 @@ export default defineConfig({
 			}
 		}),
 		viteStaticCopy({
-			targets: [{ src: "resources/manual-article/**/*", dest: "resources/manual-article" }]
+			targets: [{ src: "resources/manual-article/img", dest: "resources/manual-article/" }]
 		})
 	]
 });
