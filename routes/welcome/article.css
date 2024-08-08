@@ -6,8 +6,8 @@
     font-size: 19px;
 }
 
-.manual-article article {
-    @apply dark:text-white mb-12;
+.manual-article {
+    @apply mb-12;
 }
 
 .manual-article h1 {
