@@ -62,11 +62,11 @@
 
 以长毛象平台为例，当你选好想加入的实例之后，在网页上找到创建账户的按钮，点击进入账户注册页面。
 
-![长毛象的站点信息页面,左侧是账户注册按钮](/resources/manual-article/img/zh-Hans/gotoregister.png)
+![长毛象的站点信息页面,左侧是账户注册按钮](/resources/manual-article/img/zh-Hans/gotoregister.jpg)
 
 接下来，浏览实例的规则，如果你同意这些规则，便可在此注册账户。填写好信息，点击注册。有一些实例是开放注册的，无须批准即可直接注册账号，而有一些则需要管理员进行审核批准。
 
-![长毛象的账户注册页面](/resources/manual-article/img/zh-Hans/register.png)
+![长毛象的账户注册页面](/resources/manual-article/img/zh-Hans/register.jpg)
 
 ### 教程：与其它实例的用户交流
 
@@ -76,11 +76,11 @@
 
 在你所在实例的网站上，点击左上角的搜索框
 
-![长毛象的搜索界面](/resources/manual-article/img/zh-Hans/search-empty.png)
+![长毛象的搜索界面](/resources/manual-article/img/zh-Hans/search-empty.jpg)
 
 输入朋友的完整用户名，即可得到结果。点击关注，之后你就可以在主页看到你朋友发布的帖子（又称嘟文）了。
 
-![搜索结果页面](/resources/manual-article/img/zh-Hans/search-result.png)
+![搜索结果页面](/resources/manual-article/img/zh-Hans/search-result.jpg)
 
 ## 联邦宇宙中的用户名
 
