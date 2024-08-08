@@ -5,7 +5,7 @@ import markdownit from "markdown-it";
 import anchor from "markdown-it-anchor";
 
 import { useEffect, useState } from "react";
-import ARTICLE_CSS from "./article.css?raw";
+import styles from "./article.module.css";
 
 export default function ManualPage() {
 	const { t } = useTranslation();
@@ -20,8 +20,7 @@ export default function ManualPage() {
 
 	return (
 		<Template>
-			<style>{ARTICLE_CSS}</style>
-			{articleHTML && <article className="mb-12" dangerouslySetInnerHTML={{ __html: articleHTML }} />}
+			{articleHTML && <article className={styles.className} dangerouslySetInnerHTML={{ __html: articleHTML }} />}
 		</Template>
 	);
 }

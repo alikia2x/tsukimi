@@ -7,7 +7,7 @@ html {
 }
 
 article {
-    @apply dark:text-white
+    @apply dark:text-white mb-12;
 }
 
 h1 {
@@ -100,7 +100,7 @@ ol ul {
 }
 
 h1, h2, h3 {
-    @apply hover:underline decoration-black
+    @apply hover:underline decoration-black dark:decoration-white
 }
 
 h1::before,
@@ -129,4 +129,13 @@ h1:hover::before,
 h2:hover::before,
 h3:hover::before {
   @apply text-zinc-600 dark:text-zinc-300
+}
+
+a {
+    @apply underline text-yellow-500
+}
+
+
+h1 > a, h2 > a, h3 > a {
+    @apply decoration-transparent text-black dark:text-white
 }
