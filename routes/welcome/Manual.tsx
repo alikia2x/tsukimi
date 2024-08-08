@@ -5,6 +5,7 @@ import markdownit from "markdown-it";
 import anchor from "markdown-it-anchor";
 
 import { useEffect, useState } from "react";
+import LanguageSelector from "components/LanguageSelector";
 
 export default function ManualPage() {
 	const { t } = useTranslation();
@@ -23,6 +24,11 @@ export default function ManualPage() {
 
 	return (
 		<Template>
+			<div className="absolute max-w-full w-48 flex items-center self-end">
+				<span className="text-3xl mr-3">🌍</span>
+				<LanguageSelector avaliableLanguages={["zh-CN", "en-US", "zh-TW"].sort()}/>
+			</div>
+
 			{articleHTML && <article className="manual-article" dangerouslySetInnerHTML={{ __html: articleHTML }} />}
 		</Template>
 	);

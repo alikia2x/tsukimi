@@ -10,3 +10,7 @@
 body {
 	font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
 }
+
+html {
+	@apply dark:bg-black
+}
