@@ -1,7 +1,7 @@
 {
   "name": "tsukimi",
   "private": true,
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -24,6 +24,8 @@
     "i18next-icu": "^2.3.0",
     "jotai": "^2.9.1",
     "lodash": "^4.17.21",
+    "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^9.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",

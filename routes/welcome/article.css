@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    font-size: 19px;
+}
+
+article {
+    @apply dark:text-white
+}
+
+h1 {
+    display: block;
+    font-size: 2rem;
+    margin-block-start: 0.67rem;
+    margin-block-end: 0.67rem;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5rem;
+    margin-block-start: 0.83rem;
+    margin-block-end: 0.83rem;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17rem;
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+
+li {
+    display: list-itrem;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+    margin-top: 0.3rrem;
+    margin-bottom: 0.3rrem;
+}
+
+::marker {
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    text-transform: none;
+    text-indent: 0px !important;
+    text-align: start !important;
+    text-align-last: start !important;
+}
+
+p {
+    display: block;
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+strong {
+    font-weight: bold;
+}
+
+ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+
+ol ul {
+    list-style-type: circle;
+}
+
+h1, h2, h3 {
+    @apply hover:underline decoration-black
+}
+
+h1::before,
+h2::before,
+h3::before {
+  content: "#";
+  color: transparent; /* 初始状态下隐藏 */
+  display: inline-block;
+  position: absolute;
+  transition: color 0.3s;
+}
+
+h1:before {
+    transform: translateX(-1.75rem);
+}
+
+h2:before {
+    transform: translateX(-1.3rem);
+}
+
+h3:before {
+    transform: translateX(-0.9rem);
+}
+
+h1:hover::before,
+h2:hover::before,
+h3:hover::before {
+  @apply text-zinc-600 dark:text-zinc-300
+}
