@@ -16,6 +16,8 @@ const config: Config = {
 			}
 		}
 	},
-	plugins: [TailwindFormPlugin]
+	plugins: [TailwindFormPlugin({
+		strategy: 'class',
+	})]
 };
 export default config;

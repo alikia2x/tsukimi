@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next";
 import NativeSelect from "components/NativeSelect";
-import { useEffect, useState } from "react";
+import { HTMLAttributes, useEffect, useState } from "react";
 import langmap from "langmap";
 
-interface LanguageSelectorProps {
+interface LanguageSelectorProps extends HTMLAttributes<HTMLDivElement> {
 	avaliableLanguages?: string[];
 }
 
@@ -27,9 +27,10 @@ export default function LanguageSelector(props: LanguageSelectorProps) {
 
 	return (
 		<NativeSelect
-			value={currentLanguage}
-			onChange={(event) => setCurrentLanguage(event.currentTarget.value)}
+			currentValue={currentLanguage}
+			valueOnChange={(event) => setCurrentLanguage(event.currentTarget.value)}
 			data={codeToNameMap}
+			{...props}
 		/>
 	);
 }
