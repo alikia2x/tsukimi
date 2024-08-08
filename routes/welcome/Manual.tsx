@@ -19,11 +19,11 @@ export default function ManualPage() {
 
 	useEffect(() => {
 		import("./article.css");
-	}, []);
+	}, [articleHTML]);
 
 	return (
 		<Template>
-			{articleHTML && <article dangerouslySetInnerHTML={{ __html: articleHTML }} />}
+			{articleHTML && <article className="manual-article" dangerouslySetInnerHTML={{ __html: articleHTML }} />}
 		</Template>
 	);
 }

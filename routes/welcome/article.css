@@ -2,15 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
+.manual-article html {
     font-size: 19px;
 }
 
-article {
+.manual-article article {
     @apply dark:text-white mb-12;
 }
 
-h1 {
+.manual-article h1 {
     display: block;
     font-size: 2rem;
     margin-block-start: 0.67rem;
@@ -21,7 +21,7 @@ h1 {
     unicode-bidi: isolate;
 }
 
-h2 {
+.manual-article h2 {
     display: block;
     font-size: 1.5rem;
     margin-block-start: 0.83rem;
@@ -32,7 +32,7 @@ h2 {
     unicode-bidi: isolate;
 }
 
-h3 {
+.manual-article h3 {
     display: block;
     font-size: 1.17rem;
     margin-block-start: 1rem;
@@ -43,7 +43,7 @@ h3 {
     unicode-bidi: isolate;
 }
 
-ul {
+.manual-article ul {
     display: block;
     list-style-type: disc;
     margin-block-start: 1rem;
@@ -54,7 +54,7 @@ ul {
     unicode-bidi: isolate;
 }
 
-li {
+.manual-article li {
     display: list-itrem;
     text-align: -webkit-match-parent;
     unicode-bidi: isolate;
@@ -62,7 +62,7 @@ li {
     margin-bottom: 0.3rrem;
 }
 
-::marker {
+.manual-article ::marker {
     unicode-bidi: isolate;
     font-variant-numeric: tabular-nums;
     text-transform: none;
@@ -71,7 +71,7 @@ li {
     text-align-last: start !important;
 }
 
-p {
+.manual-article p {
     display: block;
     margin-block-start: 1rem;
     margin-block-end: 1rem;
@@ -80,11 +80,11 @@ p {
     unicode-bidi: isolate;
 }
 
-strong {
+.manual-article strong {
     font-weight: bold;
 }
 
-ol {
+.manual-article ol {
     display: block;
     list-style-type: decimal;
     margin-block-start: 1em;
@@ -95,17 +95,17 @@ ol {
     unicode-bidi: isolate;
 }
 
-ol ul {
+.manual-article ol ul {
     list-style-type: circle;
 }
 
-h1, h2, h3 {
+.manual-article h1, .manual-article h2, .manual-article h3 {
     @apply hover:underline decoration-black dark:decoration-white
 }
 
-h1::before,
-h2::before,
-h3::before {
+.manual-article h1::before,
+.manual-article h2::before,
+.manual-article h3::before {
   content: "#";
   color: transparent; /* 初始状态下隐藏 */
   display: inline-block;
@@ -113,29 +113,29 @@ h3::before {
   transition: color 0.3s;
 }
 
-h1:before {
+.manual-article h1:before {
     transform: translateX(-1.75rem);
 }
 
-h2:before {
+.manual-article h2:before {
     transform: translateX(-1.3rem);
 }
 
-h3:before {
+.manual-article h3:before {
     transform: translateX(-0.9rem);
 }
 
-h1:hover::before,
-h2:hover::before,
-h3:hover::before {
+.manual-article h1:hover::before,
+.manual-article h2:hover::before,
+.manual-article h3:hover::before {
   @apply text-zinc-600 dark:text-zinc-300
 }
 
-a {
+.manual-article a {
     @apply underline text-yellow-500
 }
 
 
-h1 > a, h2 > a, h3 > a {
+.manual-article h1 a, .manual-article h2 a, .manual-article h3 a {
     @apply decoration-transparent text-black dark:text-white
 }

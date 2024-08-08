@@ -71,6 +71,9 @@ importers:
       react-router-dom:
         specifier: ^6.25.1
         version: 6.25.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      vite-plugin-chunk-split:
+        specifier: ^0.5.0
+        version: 0.5.0(vite@5.3.5(sugarss@4.0.1(postcss@8.4.40))(terser@5.31.4))
     devDependencies:
       '@types/lodash':
         specifier: ^4.17.7
@@ -135,6 +138,9 @@ importers:
       vite-plugin-html:
         specifier: ^3.2.2
         version: 3.2.2(vite@5.3.5(sugarss@4.0.1(postcss@8.4.40))(terser@5.31.4))
+      vite-plugin-minify:
+        specifier: ^1.5.2
+        version: 1.5.2(vite@5.3.5(sugarss@4.0.1(postcss@8.4.40))(terser@5.31.4))
       vite-plugin-static-copy:
         specifier: ^1.0.6
         version: 1.0.6(vite@5.3.5(sugarss@4.0.1(postcss@8.4.40))(terser@5.31.4))
@@ -1044,6 +1050,9 @@ packages:
     resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
     engines: {node: '>=0.12'}
 
+  es-module-lexer@1.5.4:
+    resolution: {integrity: sha512-MVNK56NiMrOwitFB7cqDwq0CQutbw+0BvLshJSse0MUNU+y1FC3bUS/AQg7oUng+/wKrrki7JfmwtVHkVfPLlw==}
+
   esbuild@0.21.5:
     resolution: {integrity: sha512-mg3OPMV4hXywwpoDxu3Qda5xCKQi+vCTZq8S9J/EpkhB2HzKXq4SNFZE3+NK93JYxc8VMSep+lOUSC/RVKaBqw==}
     engines: {node: '>=12'}
@@ -1244,6 +1253,9 @@ packages:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
 
+  import-meta-resolve@4.1.0:
+    resolution: {integrity: sha512-I6fiaX09Xivtk+THaMfAwnA3MVA5Big1WHF1Dfx9hFuvNIWpXnorlkzhcQf6ehrqQiiZECRt1poOAkPmer3ruw==}
+
   imurmurhash@0.1.4:
     resolution: {integrity: sha512-JmXMZ6wuvDmLiHEml9ykzqO6lwFbof0GG4IkcGaENdCRDDmMVnny7s5HsIgHCbaq0w2MyPhDqkhTUgS2LU2PHA==}
     engines: {node: '>=0.8.19'}
@@ -1379,6 +1391,9 @@ packages:
 
   lru-cache@10.4.3:
     resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==}
+
+  magic-string@0.30.11:
+    resolution: {integrity: sha512-+Wri9p0QHMy+545hKww7YAu5NyzF8iomPL/RQazugQ9+Ez4Ic3mERMd8ZTX5rfK944j+560ZJi8iAwgak1Ac7A==}
 
   markdown-it-anchor@9.0.1:
     resolution: {integrity: sha512-cBt7aAzmkfX8X7FqAe8EBryiKmToXgMQEEMqkXzWCm0toDtfDYIGboKeTKd8cpNJArJtutrf+977wFJTsvNGmQ==}
@@ -1942,10 +1957,20 @@ packages:
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
+  vite-plugin-chunk-split@0.5.0:
+    resolution: {integrity: sha512-pasNKLhH+ICjoCF6HoKKvgmZ1LEPSCIKAa8Lz0ZpMyQC9bLmCLT7UxgKMULewsc9SUw89OX0udsGiIQCtr8wLA==}
+    peerDependencies:
+      vite: ^4 || ^5
+
   vite-plugin-html@3.2.2:
     resolution: {integrity: sha512-vb9C9kcdzcIo/Oc3CLZVS03dL5pDlOFuhGlZYDCJ840BhWl/0nGeZWf3Qy7NlOayscY4Cm/QRgULCQkEZige5Q==}
     peerDependencies:
       vite: '>=2.0.0'
+
+  vite-plugin-minify@1.5.2:
+    resolution: {integrity: sha512-clf3THHlet1jD35y8+mbw/xgACbdUQ1Eyc9zZFiqaxVOZLSC3UbrkOYOG+Nf4cleRjWgb8czbXrnQiWZICVh3Q==}
+    peerDependencies:
+      vite: '*'
 
   vite-plugin-static-copy@1.0.6:
     resolution: {integrity: sha512-3uSvsMwDVFZRitqoWHj0t4137Kz7UynnJeq1EZlRW7e25h2068fyIZX4ORCCOAkfp1FklGxJNVJBkBOD+PZIew==}
@@ -2872,6 +2897,8 @@ snapshots:
 
   entities@4.5.0: {}
 
+  es-module-lexer@1.5.4: {}
+
   esbuild@0.21.5:
     optionalDependencies:
       '@esbuild/aix-ppc64': 0.21.5
@@ -3137,6 +3164,8 @@ snapshots:
       parent-module: 1.0.1
       resolve-from: 4.0.0
 
+  import-meta-resolve@4.1.0: {}
+
   imurmurhash@0.1.4: {}
 
   inflight@1.0.6:
@@ -3255,6 +3284,10 @@ snapshots:
       tslib: 2.6.3
 
   lru-cache@10.4.3: {}
+
+  magic-string@0.30.11:
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.5.0
 
   markdown-it-anchor@9.0.1(@types/markdown-it@14.1.2)(markdown-it@14.1.0):
     dependencies:
@@ -3791,6 +3824,13 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
+  vite-plugin-chunk-split@0.5.0(vite@5.3.5(sugarss@4.0.1(postcss@8.4.40))(terser@5.31.4)):
+    dependencies:
+      es-module-lexer: 1.5.4
+      import-meta-resolve: 4.1.0
+      magic-string: 0.30.11
+      vite: 5.3.5(sugarss@4.0.1(postcss@8.4.40))(terser@5.31.4)
+
   vite-plugin-html@3.2.2(vite@5.3.5(sugarss@4.0.1(postcss@8.4.40))(terser@5.31.4)):
     dependencies:
       '@rollup/pluginutils': 4.2.1
@@ -3805,6 +3845,11 @@ snapshots:
       html-minifier-terser: 6.1.0
       node-html-parser: 5.4.2
       pathe: 0.2.0
+      vite: 5.3.5(sugarss@4.0.1(postcss@8.4.40))(terser@5.31.4)
+
+  vite-plugin-minify@1.5.2(vite@5.3.5(sugarss@4.0.1(postcss@8.4.40))(terser@5.31.4)):
+    dependencies:
+      html-minifier-terser: 6.1.0
       vite: 5.3.5(sugarss@4.0.1(postcss@8.4.40))(terser@5.31.4)
 
   vite-plugin-static-copy@1.0.6(vite@5.3.5(sugarss@4.0.1(postcss@8.4.40))(terser@5.31.4)):

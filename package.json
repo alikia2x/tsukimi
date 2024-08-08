@@ -1,7 +1,7 @@
 {
   "name": "tsukimi",
   "private": true,
-  "version": "0.1.6",
+  "version": "0.1.7",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -30,7 +30,8 @@
     "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
     "react-i18next": "^15.0.0",
-    "react-router-dom": "^6.25.1"
+    "react-router-dom": "^6.25.1",
+    "vite-plugin-chunk-split": "^0.5.0"
   },
   "devDependencies": {
     "@types/lodash": "^4.17.7",
@@ -54,6 +55,7 @@
     "typescript": "^5.2.2",
     "vite": "^5.3.4",
     "vite-plugin-html": "^3.2.2",
+    "vite-plugin-minify": "^1.5.2",
     "vite-plugin-static-copy": "^1.0.6",
     "vite-tsconfig-paths": "^4.3.2"
   }
