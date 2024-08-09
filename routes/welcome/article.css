@@ -3,139 +3,142 @@
 @tailwind utilities;
 
 .manual-article html {
-    font-size: 19px;
+	font-size: 19px;
 }
 
 .manual-article {
-    @apply mb-12;
+	@apply mb-12;
 }
 
 .manual-article h1 {
-    display: block;
-    font-size: 2rem;
-    margin-block-start: 0.67rem;
-    margin-block-end: 0.67rem;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-    unicode-bidi: isolate;
+	display: block;
+	font-size: 2rem;
+	margin-block-start: 0.67rem;
+	margin-block-end: 0.67rem;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	font-weight: bold;
+	unicode-bidi: isolate;
 }
 
 .manual-article h2 {
-    display: block;
-    font-size: 1.5rem;
-    margin-block-start: 0.83rem;
-    margin-block-end: 0.83rem;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-    unicode-bidi: isolate;
+	display: block;
+	font-size: 1.5rem;
+	margin-block-start: 0.83rem;
+	margin-block-end: 0.83rem;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	font-weight: bold;
+	unicode-bidi: isolate;
 }
 
 .manual-article h3 {
-    display: block;
-    font-size: 1.17rem;
-    margin-block-start: 1rem;
-    margin-block-end: 1rem;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-    unicode-bidi: isolate;
+	display: block;
+	font-size: 1.17rem;
+	margin-block-start: 1rem;
+	margin-block-end: 1rem;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	font-weight: bold;
+	unicode-bidi: isolate;
 }
 
 .manual-article ul {
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1rem;
-    margin-block-end: 1rem;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-    unicode-bidi: isolate;
+	display: block;
+	list-style-type: disc;
+	margin-block-start: 1rem;
+	margin-block-end: 1rem;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	padding-inline-start: 40px;
+	unicode-bidi: isolate;
 }
 
 .manual-article li {
-    display: list-itrem;
-    text-align: -webkit-match-parent;
-    unicode-bidi: isolate;
-    margin-top: 0.3rrem;
-    margin-bottom: 0.3rrem;
+	display: list-itrem;
+	text-align: -webkit-match-parent;
+	unicode-bidi: isolate;
+	margin-top: 0.3rrem;
+	margin-bottom: 0.3rrem;
 }
 
 .manual-article ::marker {
-    unicode-bidi: isolate;
-    font-variant-numeric: tabular-nums;
-    text-transform: none;
-    text-indent: 0px !important;
-    text-align: start !important;
-    text-align-last: start !important;
+	unicode-bidi: isolate;
+	font-variant-numeric: tabular-nums;
+	text-transform: none;
+	text-indent: 0px !important;
+	text-align: start !important;
+	text-align-last: start !important;
 }
 
 .manual-article p {
-    display: block;
-    margin-block-start: 1rem;
-    margin-block-end: 1rem;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
+	display: block;
+	margin-block-start: 1rem;
+	margin-block-end: 1rem;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	unicode-bidi: isolate;
 }
 
 .manual-article strong {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 .manual-article ol {
-    display: block;
-    list-style-type: decimal;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-    unicode-bidi: isolate;
+	display: block;
+	list-style-type: decimal;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	padding-inline-start: 40px;
+	unicode-bidi: isolate;
 }
 
 .manual-article ol ul {
-    list-style-type: circle;
+	list-style-type: circle;
 }
 
-.manual-article h1, .manual-article h2, .manual-article h3 {
-    @apply hover:underline decoration-black dark:decoration-white
+.manual-article h1,
+.manual-article h2,
+.manual-article h3 {
+	@apply hover:underline decoration-black dark:decoration-white;
 }
 
 .manual-article h1::before,
 .manual-article h2::before,
 .manual-article h3::before {
-  content: "#";
-  color: transparent; /* 初始状态下隐藏 */
-  display: inline-block;
-  position: absolute;
-  transition: color 0.3s;
+	content: "#";
+	color: transparent; /* 初始状态下隐藏 */
+	display: inline-block;
+	position: absolute;
+	transition: color 0.3s;
 }
 
 .manual-article h1:before {
-    transform: translateX(-1.75rem);
+	transform: translateX(-1.75rem);
 }
 
 .manual-article h2:before {
-    transform: translateX(-1.3rem);
+	transform: translateX(-1.3rem);
 }
 
 .manual-article h3:before {
-    transform: translateX(-0.9rem);
+	transform: translateX(-0.9rem);
 }
 
 .manual-article h1:hover::before,
 .manual-article h2:hover::before,
 .manual-article h3:hover::before {
-  @apply text-zinc-600 dark:text-zinc-300
+	@apply text-zinc-600 dark:text-zinc-300;
 }
 
 .manual-article a {
-    @apply underline text-yellow-500
+	@apply underline text-yellow-500;
 }
 
-
-.manual-article h1 a, .manual-article h2 a, .manual-article h3 a {
-    @apply decoration-transparent text-black dark:text-white
+.manual-article h1 a,
+.manual-article h2 a,
+.manual-article h3 a {
+	@apply decoration-transparent text-black dark:text-white;
 }
