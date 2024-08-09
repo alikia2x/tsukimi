@@ -103,7 +103,7 @@ function Login() {
 						}, 2000);
 					}}
 				>
-					<Icon icon="la:sign-in-alt" className="text-2xl"/>
+					<Icon icon="la:sign-in-alt" className="text-2xl" />
 					<span>Log In</span>
 				</button>
 			</div>

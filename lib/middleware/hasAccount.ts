@@ -1,4 +1,4 @@
-import getAccounts from 'lib/db/accounts/readAccounts';
+import getAccounts from "lib/db/accounts/readAccounts";
 
 export default async function hasAccount() {
 	return getAccounts().then((accounts) => {

@@ -26,13 +26,13 @@ i18n.use(initReactI18next)
 			"zh-HK": {
 				translation: zh_Hant
 			},
-			"ja": {
+			ja: {
 				translation: ja
 			},
-			"es": {
+			es: {
 				translation: es
 			},
-			"fr": {
+			fr: {
 				translation: fr
 			}
 		},

@@ -1,6 +1,6 @@
-import PlainProgress from 'components/progress/plain';
-import randomNumberFromRange from 'lib/utils/randomRange';
-import { useEffect, useState } from 'react';
+import PlainProgress from "components/progress/plain";
+import randomNumberFromRange from "lib/utils/randomRange";
+import { useEffect, useState } from "react";
 
 export default function LoadingPage(props: { finished?: boolean; progress?: number; estTime?: number }) {
 	const [currentProgress, setProgress] = useState(0);
@@ -32,7 +32,7 @@ export default function LoadingPage(props: { finished?: boolean; progress?: numb
 	return (
 		<div className="relative min-h-screen flex items-center">
 			<div className="relative w-full flex flex-col justify-center items-center">
-				<h1 className="text-3xl lg:text-4xl font-extralight uppercase" style={{ letterSpacing: '0.2rem' }}>
+				<h1 className="text-3xl lg:text-4xl font-extralight uppercase" style={{ letterSpacing: "0.2rem" }}>
 					Loading
 				</h1>
 				<br />

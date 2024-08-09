@@ -8,15 +8,15 @@ The Fediverse (Federated Universe) is a collection of interconnected, decentrali
 
 ### Centralized Platforms
 
-- **Central Control**: Platforms like Twitter, Facebook, and Instagram are controlled by a single company that manages all the data, users, and features.
-- **Data Ownership**: Your data is stored on the platform's servers, and the company has access to and control over this data.
-- **Moderation**: Content moderation is managed by the platform itself, which may lead to inconsistent enforcement of rules and policies.
+-   **Central Control**: Platforms like Twitter, Facebook, and Instagram are controlled by a single company that manages all the data, users, and features.
+-   **Data Ownership**: Your data is stored on the platform's servers, and the company has access to and control over this data.
+-   **Moderation**: Content moderation is managed by the platform itself, which may lead to inconsistent enforcement of rules and policies.
 
 ### Fediverse
 
-- **Decentralized**: The Fediverse is made up of numerous independent servers (instances) that interact with each other. Each server is managed by its own administrator or community.
-- **Data Ownership**: Users have more control over their data since it's stored on the server of their chosen instance.
-- **Moderation**: Moderation policies are set by individual instances, which can lead to a more diverse range of rules and approaches.
+-   **Decentralized**: The Fediverse is made up of numerous independent servers (instances) that interact with each other. Each server is managed by its own administrator or community.
+-   **Data Ownership**: Users have more control over their data since it's stored on the server of their chosen instance.
+-   **Moderation**: Moderation policies are set by individual instances, which can lead to a more diverse range of rules and approaches.
 
 ## What is an Instance?
 
@@ -37,22 +37,24 @@ Of course, the admins of some instances will modify the software code to achieve
 ## How to Join the Fediverse
 
 1. **Choose a Platform**: Decide which Fediverse platform you'd like to use. Some popular platforms include:
-   - **[Mastodon](https://joinmastodon.org/)**: A microblogging platform similar to Twitter.
-   - **[Misskey](https://misskey-hub.net/)**: A social platform with rich features.
-   - **[Pleroma](https://pleroma.social/)**: Like Mastodon, but is lighter and more flexible.
-   - [GoToSocial](https://gotosocial.org/): A fast, fun, ActivityPub server.
-   - [PeerTube](https://joinpeertube.org/): A video hosting and sharing platform.
-   - [Friendica](https://friendi.ca/): A social network that supports a variety of protocols.
 
-   **Mastodon** is the most popular platform of the Fediverse, the ecosystem and software built around it are also rich. **If you are not sure, it's a good choice.**
+    - **[Mastodon](https://joinmastodon.org/)**: A microblogging platform similar to Twitter.
+    - **[Misskey](https://misskey-hub.net/)**: A social platform with rich features.
+    - **[Pleroma](https://pleroma.social/)**: Like Mastodon, but is lighter and more flexible.
+    - [GoToSocial](https://gotosocial.org/): A fast, fun, ActivityPub server.
+    - [PeerTube](https://joinpeertube.org/): A video hosting and sharing platform.
+    - [Friendica](https://friendi.ca/): A social network that supports a variety of protocols.
 
-   > **No matter which platform you choose, you can communicate with people on other platforms**. This is one of the features of the Fedeiverse. So there is no need to worry, just choose the one you like.
+    **Mastodon** is the most popular platform of the Fediverse, the ecosystem and software built around it are also rich. **If you are not sure, it's a good choice.**
+
+    > **No matter which platform you choose, you can communicate with people on other platforms**. This is one of the features of the Fedeiverse. So there is no need to worry, just choose the one you like.
 
 2. **Find an Instance**: Each platform has multiple instances. You can find a list of instances and choose one based on your interests, community, or moderation policies. Here's some good places for you to find the optimal server.
-   - **[Mastodon Servers](https://joinmastodon.org/servers)**: Official page of Mastodon for newcomers to find a server.
-   - **[Misskey Server List](https://misskey-hub.net/en/servers/)**: If you choose Misskey, here's the official page for you to find the instance that fits you.
-   - **[FediDB](https://fedidb.org/)**: No matter which platform you choose, you can always find a suitable server here.
-   - [Pleroma Featured Servers](https://pleroma.social/#featured-instances): Few instances that runs pleroma.
+
+    - **[Mastodon Servers](https://joinmastodon.org/servers)**: Official page of Mastodon for newcomers to find a server.
+    - **[Misskey Server List](https://misskey-hub.net/en/servers/)**: If you choose Misskey, here's the official page for you to find the instance that fits you.
+    - **[FediDB](https://fedidb.org/)**: No matter which platform you choose, you can always find a suitable server here.
+    - [Pleroma Featured Servers](https://pleroma.social/#featured-instances): Few instances that runs pleroma.
 
 3. **Create an Account**: Once you've chosen an instance, visit its website and sign up for an account. You may need to agree to the instance's rules and policies.
 

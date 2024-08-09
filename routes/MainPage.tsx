@@ -1,6 +1,6 @@
-import { Navigate } from 'react-router-dom';
-import hasAccount from 'lib/middleware/hasAccount.ts';
-import { useEffect, useState } from 'react';
+import { Navigate } from "react-router-dom";
+import hasAccount from "lib/middleware/hasAccount.ts";
+import { useEffect, useState } from "react";
 
 export default function MainPage() {
 	const [accountState, setAccountState] = useState<null | boolean>(null);

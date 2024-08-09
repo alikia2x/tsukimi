@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 body {
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
-	@apply bg-white dark:bg-black
+	font-family:
+		system-ui,
+		-apple-system,
+		BlinkMacSystemFont,
+		sans-serif !important;
+	@apply bg-white dark:bg-black;
 }
 
 html {
-	@apply bg-white dark:bg-black
+	@apply bg-white dark:bg-black;
 }

@@ -30,7 +30,7 @@ export default function ManualPage() {
 			</Helmet>
 			<div className="relative md:absolute max-w-full w-56 flex items-center self-end">
 				<span className="text-3xl mr-3">🌍</span>
-				<LanguageSelector avaliableLanguages={["zh-CN", "en-US", "zh-TW"].sort()} className="w-full"/>
+				<LanguageSelector avaliableLanguages={["zh-CN", "en-US", "zh-TW"].sort()} className="w-full" />
 			</div>
 
 			{articleHTML && <article className="manual-article" dangerouslySetInnerHTML={{ __html: articleHTML }} />}

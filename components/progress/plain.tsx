@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect } from "react";
 
 export default function PlainProgress(props: { min?: number; max?: number; current: number }) {
 	const min = props.min || 0;
@@ -9,7 +9,7 @@ export default function PlainProgress(props: { min?: number; max?: number; curre
 
 	useEffect(() => {
 		if (progressBarRef.current) {
-			progressBarRef.current.style.transition = 'width 780ms linear'; // 设置过渡动画
+			progressBarRef.current.style.transition = "width 780ms linear"; // 设置过渡动画
 			progressBarRef.current.style.width = `${(current / (max - min)) * 100}%`;
 		}
 	}, [current, max, min]);
