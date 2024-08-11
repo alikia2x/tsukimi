@@ -2,13 +2,14 @@ import { useTranslation } from "react-i18next";
 import { animated, useSpring } from "@react-spring/web";
 import { useState } from "react";
 import { Icon } from "@iconify/react";
+import { softwareNameToAPI } from "lib/api/servers";
+import _ from "lodash";
 
 export default function Login() {
 	const { t } = useTranslation();
 	const [failed, setFailedState] = useState(false);
 	const [connecting, setConnectingState] = useState(false);
 	const [inputBoxData, setInputBoxData] = useState("");
-	const [software, setSoftware] = useState("");
 	const { transform } = useSpring({
 		transform: `translateX(${failed ? "-0.01rem" : "0.01rem"})`,
 		config: {
@@ -18,6 +19,26 @@ export default function Login() {
 			restVelocity: 0.2
 		}
 	});
+	async function startLogin() {
+		const software = await getServerSoftware();
+		console.debug(_.has(softwareNameToAPI, software))
+		if (_.has(softwareNameToAPI, software) === false) {
+			setFailedState(true);
+		}
+	}
+	async function getServerSoftware() {
+		setConnectingState(true);
+		setFailedState(false);
+		const url = import.meta.env.VITE_CORS_PROXY_BASE_URL + "https://" + inputBoxData + "/nodeinfo/2.0";
+		const response = await fetch(url);
+		if (!response.ok) {
+			setFailedState(true);
+			setConnectingState(false);
+		}
+		const data = await response.json();
+		setConnectingState(false);
+		return data["software"]["name"];
+	}
 	return (
 		<div className="mb-10 flex flex-col ">
 			<h2 className="text-3xl my-2 font-semibold">{t("welcome.login")}</h2>
@@ -50,28 +71,8 @@ export default function Login() {
 					className="bg-[#f0f1f2] dark:bg-zinc-800 hover:bg-neutral-200 dark:hover:bg-[#2f2f33]
 					 text-yellow-500 cursor-default
 						rounded-md px-3 h-12 text-lg flex justify-center items-center w-fit min-w-28 gap-1"
-					onClick={() => {
-						setConnectingState(true);
-						setFailedState(false);
-						setSoftware("");
-						const url =
-							import.meta.env.VITE_CORS_PROXY_BASE_URL + "https://" + inputBoxData + "/nodeinfo/2.0";
-						fetch(url)
-							.then((response) => {
-								if (!response.ok) {
-									setFailedState(true);
-									setConnectingState(false);
-								}
-								return response.json();
-							})
-							.then((jsonData) => {
-								setSoftware(jsonData["software"]["name"] + " " + jsonData["software"]["version"]);
-								setConnectingState(false);
-							})
-							.catch(() => {
-								setFailedState(true);
-								setConnectingState(false);
-							});
+					onClick={async () => {
+						await startLogin();
 					}}
 				>
 					{connecting ? (
@@ -79,7 +80,7 @@ export default function Login() {
 					) : (
 						<Icon icon="la:sign-in-alt" className="text-2xl" />
 					)}
-					<span>Log In</span>
+					<span>{t("welcome.log-in")}</span>
 				</button>
 			</div>
 
@@ -88,7 +89,6 @@ export default function Login() {
 			>
 				{failed ? t("welcome.connection-failed") : t("welcome.what-is-instance-url")}
 			</p>
-			{software && <p>Server software: {software}</p>}
 		</div>
 	);
 }

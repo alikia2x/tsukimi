@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { animated, useSpring, useSprings } from "@react-spring/web";
 import { Link } from "react-router-dom";
 import Template from "./Template";
-import Login from "components/welcome/login"
+import Login from "components/welcome/login";
 
 const TITLE_ANIMATION_INTERVAL = 150;
 const ANIMATION_START_DELAY = 250;
@@ -74,10 +74,9 @@ function Tsukimi() {
 		[]
 	);
 	return (
-		<animated.h1 className="relative flex  text-5xl font-light mt-6" style={{ ...titleAnimationProps }}>
+		<animated.h1 className="relative flex text-5xl font-light mt-6" style={{ ...titleAnimationProps }}>
 			<img src="/android-chrome-192x192.png" className="inline-block h-12 w-12 mr-3" />
-			{/* A small margin-right is added to keep visual balance */}
-			<span className="mr-3 ">{t("tsukimi")}</span>
+			<span>{t("tsukimi")}</span>
 		</animated.h1>
 	);
 }
