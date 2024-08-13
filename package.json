@@ -1,14 +1,15 @@
 {
 	"name": "tsukimi",
 	"private": true,
-	"version": "0.1.14",
+	"version": "0.1.15",
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc -b && vite build",
 		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
 		"preview": "vite preview",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"test": "vitest"
 	},
 	"dependencies": {
 		"@alikia/dark-theme-hook": "^1.0.1",
@@ -19,6 +20,7 @@
 		"@mantine/nprogress": "^7.12.0",
 		"@mantine/spotlight": "^7.12.0",
 		"@react-spring/web": "^9.7.4",
+		"consola": "^3.2.3",
 		"dexie": "^4.0.8",
 		"dexie-react-hooks": "^1.1.7",
 		"i18next": "^23.12.2",
@@ -64,6 +66,7 @@
 		"vite-plugin-html": "^3.2.2",
 		"vite-plugin-minify": "^1.5.2",
 		"vite-plugin-static-copy": "^1.0.6",
-		"vite-tsconfig-paths": "^4.3.2"
+		"vite-tsconfig-paths": "^4.3.2",
+		"vitest": "^2.0.5"
 	}
 }

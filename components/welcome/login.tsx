@@ -2,8 +2,9 @@ import { useTranslation } from "react-i18next";
 import { animated, useSpring } from "@react-spring/web";
 import { useState } from "react";
 import { Icon } from "@iconify/react";
-import { softwareNameToAPI } from "lib/api/servers";
-import _ from "lodash";
+import { getServerAPIStyle } from "lib/api/general/server";
+import login from "lib/api/misskey/login";
+import consola from "consola";
 
 export default function Login() {
 	const { t } = useTranslation();
@@ -20,24 +21,10 @@ export default function Login() {
 		}
 	});
 	async function startLogin() {
-		const software = await getServerSoftware();
-		console.debug(_.has(softwareNameToAPI, software))
-		if (_.has(softwareNameToAPI, software) === false) {
-			setFailedState(true);
-		}
-	}
-	async function getServerSoftware() {
-		setConnectingState(true);
-		setFailedState(false);
-		const url = import.meta.env.VITE_CORS_PROXY_BASE_URL + "https://" + inputBoxData + "/nodeinfo/2.0";
-		const response = await fetch(url);
-		if (!response.ok) {
-			setFailedState(true);
-			setConnectingState(false);
-		}
-		const data = await response.json();
-		setConnectingState(false);
-		return data["software"]["name"];
+		const APIStyle = await getServerAPIStyle(inputBoxData);
+		if (APIStyle == null) setFailedState(true);
+		consola.log(await login(inputBoxData));
+		return APIStyle;
 	}
 	return (
 		<div className="mb-10 flex flex-col ">
@@ -72,7 +59,10 @@ export default function Login() {
 					 text-yellow-500 cursor-default
 						rounded-md px-3 h-12 text-lg flex justify-center items-center w-fit min-w-28 gap-1"
 					onClick={async () => {
+						setFailedState(false);
+						setConnectingState(true);
 						await startLogin();
+						setConnectingState(false);
 					}}
 				>
 					{connecting ? (
