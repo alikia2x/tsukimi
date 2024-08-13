@@ -7,6 +7,8 @@ export const softwareNameToAPI = {
     "mastodon": "mastodon"
 }
 
+export type SupportAPIStyle = "misskey" | "mastodon";
+
 export async function getServerSoftware(domain: string) {
     const nodeInfo = await getNodeInfo(domain);
     if (!nodeInfo) return null;
@@ -15,9 +17,9 @@ export async function getServerSoftware(domain: string) {
     return nodeInfoDocument.software.name;
 }
 
-export async function getServerAPIStyle(domain: string) {
+export async function getServerAPIStyle(domain: string)  {
     const software = await getServerSoftware(domain);
     if (!software) return null;
     const softwareName = software.toLowerCase();
-    return softwareNameToAPI[softwareName as keyof typeof softwareNameToAPI] as string | null;
+    return softwareNameToAPI[softwareName as keyof typeof softwareNameToAPI] as SupportAPIStyle | null;
 }

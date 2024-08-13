@@ -3,8 +3,7 @@ import { animated, useSpring } from "@react-spring/web";
 import { useState } from "react";
 import { Icon } from "@iconify/react";
 import { getServerAPIStyle } from "lib/api/general/server";
-import login from "lib/api/misskey/login";
-import consola from "consola";
+import misskeyLogin from "lib/api/misskey/login";
 
 export default function Login() {
 	const { t } = useTranslation();
@@ -23,8 +22,10 @@ export default function Login() {
 	async function startLogin() {
 		const APIStyle = await getServerAPIStyle(inputBoxData);
 		if (APIStyle == null) setFailedState(true);
-		consola.log(await login(inputBoxData));
-		return APIStyle;
+		if (APIStyle == "misskey") {
+			const loginURL = await misskeyLogin(inputBoxData);
+			window.open(loginURL);
+		}
 	}
 	return (
 		<div className="mb-10 flex flex-col ">
