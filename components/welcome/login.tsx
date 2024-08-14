@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Icon } from "@iconify/react";
 import { getServerAPIStyle } from "lib/api/general/server";
 import misskeyLogin from "lib/api/misskey/login";
+import createSession from "lib/db/login/createSession";
 
 export default function Login() {
 	const { t } = useTranslation();
@@ -24,7 +25,8 @@ export default function Login() {
 		if (APIStyle == null) setFailedState(true);
 		if (APIStyle == "misskey") {
 			const loginURL = await misskeyLogin(inputBoxData);
-			window.open(loginURL);
+			createSession(inputBoxData);
+			location.href = loginURL;
 		}
 	}
 	return (
