@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 //import "@mantine/core/styles.css";
 import 'react-app-polyfill/stable';
+import 'abortcontroller-polyfill/dist/polyfill-patch-fetch';
 
 import { MantineProvider } from "@mantine/core";
 import App from "./App.tsx";

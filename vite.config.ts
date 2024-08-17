@@ -34,7 +34,7 @@ const jsToBottomNoModule = () => {
 // https://vitejs.dev/config/
 export default defineConfig({
 	build: {
-		target: "es2015",
+		target: "es2015"
 	},
 	plugins: [
 		react(),
@@ -62,7 +62,8 @@ export default defineConfig({
 		jsToBottomNoModule(),
 		ViteMinifyPlugin({}),
 		legacy({
-			targets: ["> 0.2% and not dead or firefox >=58"]
+			targets: ["> 0.2% and not dead or firefox >=58 or chrome > 60"],
+			modernPolyfills: ["es/global-this"]
 		})
 	]
 });

@@ -23,7 +23,7 @@ const router = createBrowserRouter([
 function App() {
 	const { t } = useTranslation();
 	return (
-		<div>
+		<div className="overflow-x-hidden">
 			<Helmet>
 				<meta charSet="utf-8" />
 				<meta name="apple-mobile-web-app-capable" content="yes" />

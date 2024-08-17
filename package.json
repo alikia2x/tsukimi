@@ -1,7 +1,7 @@
 {
 	"name": "tsukimi",
 	"private": true,
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
@@ -22,6 +22,7 @@
 		"@mantine/spotlight": "^7.12.1",
 		"@react-spring/web": "^9.7.4",
 		"@vitejs/plugin-legacy": "^5.4.2",
+		"abortcontroller-polyfill": "^1.7.5",
 		"consola": "^3.2.3",
 		"dexie": "^4.0.8",
 		"dexie-react-hooks": "^1.1.7",
