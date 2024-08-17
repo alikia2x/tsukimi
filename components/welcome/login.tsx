@@ -24,9 +24,15 @@ export default function Login() {
 		const APIStyle = await getServerAPIStyle(inputBoxData);
 		if (APIStyle == null) setFailedState(true);
 		if (APIStyle == "misskey") {
-			const loginURL = await misskeyLogin(inputBoxData);
-			createSession(inputBoxData);
-			location.href = loginURL;
+			try {
+				const loginURL = await misskeyLogin(inputBoxData);
+				createSession(inputBoxData);
+				location.href = loginURL;
+			}
+			catch (err){
+				setFailedState(true);
+				setConnectingState(false);
+			}
 		}
 	}
 	return (

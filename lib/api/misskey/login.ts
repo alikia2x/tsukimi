@@ -1,5 +1,6 @@
 import { t } from "i18next";
 import { normalPermissions } from "./permission";
+import '@alikia/random-uuid';
 
 /**
  *

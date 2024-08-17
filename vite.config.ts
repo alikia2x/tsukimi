@@ -4,6 +4,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import { viteStaticCopy } from "vite-plugin-static-copy";
 import { chunkSplitPlugin } from "vite-plugin-chunk-split";
 import { ViteMinifyPlugin } from "vite-plugin-minify";
+import legacy from "@vitejs/plugin-legacy";
 
 const jsToBottomNoModule = () => {
 	return {
@@ -32,6 +33,9 @@ const jsToBottomNoModule = () => {
 
 // https://vitejs.dev/config/
 export default defineConfig({
+	build: {
+		target: "es2015",
+	},
 	plugins: [
 		react(),
 		tsconfigPaths(),
@@ -56,6 +60,9 @@ export default defineConfig({
 			}
 		}),
 		jsToBottomNoModule(),
-		ViteMinifyPlugin({})
+		ViteMinifyPlugin({}),
+		legacy({
+			targets: ["> 0.2% and not dead or firefox >=58"]
+		})
 	]
 });

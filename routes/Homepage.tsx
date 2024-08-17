@@ -1,7 +1,9 @@
+import Timeline from "components/timeline";
+
 export default function Homepage() {
 	return (
-		<>
-			<h1>Homepage</h1>
-		</>
+		<div className="flex h-screen">
+			<Timeline/>
+		</div>
 	);
 }
