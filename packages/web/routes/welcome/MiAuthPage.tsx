@@ -29,8 +29,8 @@ export default function MiAuthPage() {
 					username: data.user.username,
 					host: domain,
 					serverSoftware: "misskey",
-					token: data.token,
-				}
+					token: data.token
+				};
 				setAccount(newAccount);
 				location.pathname = "/home";
 			})
@@ -48,8 +48,7 @@ export default function MiAuthPage() {
 				</p>
 			</div>
 		);
-	}
-	else if (domain === null) {
+	} else if (domain === null) {
 		return (
 			<div className="flex flex-col gap-8 justify-center items-center h-screen">
 				<h1 className="text-4xl font-bold">Oops!</h1>
@@ -59,8 +58,7 @@ export default function MiAuthPage() {
 				</p>
 			</div>
 		);
-	}
-	else if (failed) {
+	} else if (failed) {
 		return (
 			<div className="flex flex-col gap-8 justify-center items-center h-screen">
 				<h1 className="text-4xl font-bold">Oops!</h1>

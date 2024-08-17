@@ -1,0 +1,12 @@
+{
+	"version": "0.2.2",
+	"npmClient": "pnpm",
+	"targetDefaults": {
+		"build": {
+			"cache": true
+		},
+		"test": {
+			"cache": true
+		}
+	}
+}

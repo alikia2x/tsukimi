@@ -70,8 +70,7 @@ export interface NodeInfo_2_0 {
 
 export async function getNodeInfo(domain: string, useProxy = true): Promise<NodeInfoResult> {
 	const nodeInfoPath =
-		(useProxy ? `${import.meta.env.VITE_CORS_PROXY_BASE_URL}` : "") +
-		`https://${domain}/.well-known/nodeinfo`;
+		(useProxy ? `${import.meta.env.VITE_CORS_PROXY_BASE_URL}` : "") + `https://${domain}/.well-known/nodeinfo`;
 
 	try {
 		const response = await fetch(nodeInfoPath);

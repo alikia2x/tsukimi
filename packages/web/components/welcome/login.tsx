@@ -28,8 +28,7 @@ export default function Login() {
 				const loginURL = await misskeyLogin(inputBoxData);
 				createSession(inputBoxData);
 				location.href = loginURL;
-			}
-			catch (err){
+			} catch (err) {
 				setFailedState(true);
 				setConnectingState(false);
 			}
