@@ -7,6 +7,9 @@
 		"instance-url": "URL de l'instance",
 		"what-is-instance-url": "L'URL de l'instance est l'URL du serveur où votre compte est enregistré.",
 		"no-account": "Vous n'avez pas encore de compte ?",
-		"quick-manual-for-you": "Voici un manuel rapide pour vous !"
+		"quick-manual-for-you": "Voici un manuel rapide pour vous !",
+		"connection-failed": "IMPOSSIBLE DE SE CONNECTER",
+		"go-back": "Retourner",
+		"log-in": "Connexion"
 	}
 }

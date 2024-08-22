@@ -1,3 +1,3 @@
 export default function endSession() {
-    return localStorage.removeItem('login-session');
+	return localStorage.removeItem("login-session");
 }

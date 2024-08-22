@@ -1,12 +1,12 @@
 import { t } from "i18next";
 import { normalPermissions } from "./permission";
-import '@alikia/random-uuid';
+import "@alikia/random-uuid";
 
 /**
  *
  * @param domain misskey instance domain
  * @returns The login URL that should be opened in a new tab.
-*/
+ */
 export default async function misskeyLogin(domain: string) {
 	const uuid = crypto.randomUUID();
 	const appBaseURL = new URL(import.meta.env.VITE_APP_BASE_URL);

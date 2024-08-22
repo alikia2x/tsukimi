@@ -7,6 +7,9 @@
 		"instance-url": "URL de la instancia",
 		"what-is-instance-url": "La URL de la instancia es la URL del servidor donde está registrada tu cuenta.",
 		"no-account": "¿Aún no tienes una cuenta?",
-		"quick-manual-for-you": "¡Aquí tienes un manual breve para ti!"
+		"quick-manual-for-you": "¡Aquí tienes un manual breve para ti!",
+		"connection-failed": "NO SE PUDO CONECTAR",
+		"go-back": "Volver",
+		"log-in": "Inicia sesión"
 	}
 }

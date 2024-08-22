@@ -7,6 +7,9 @@
 		"instance-url": "インスタンスURL",
 		"what-is-instance-url": "インスタンスURLは、あなたのアカウントが登録されているインスタンス（サーバー）のURLです。",
 		"no-account": "まだアカウントをお持ちでないですか？",
-		"quick-manual-for-you": "こちらが簡単なマニュアルです"
+		"quick-manual-for-you": "こちらが簡単なマニュアルです",
+		"connection-failed": "接続できませんでした",
+		"go-back": "戻る",
+		"log-in": "ログイン"
 	}
 }

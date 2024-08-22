@@ -32,7 +32,7 @@ export default function ManualPage() {
 			</Helmet>
 			<div className="relative flex items-center w-full">
 				<div className="flex grow text-2xl items-center text-yellow-400">
-					<Icon icon="material-symbols:arrow-back-ios-rounded" className="font-bold"/>
+					<Icon icon="material-symbols:arrow-back-ios-rounded" className="font-bold" />
 					<Link to="/welcome">{t("welcome.go-back")}</Link>
 				</div>
 				<div className="flex">
