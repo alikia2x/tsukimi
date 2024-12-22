@@ -15,5 +15,6 @@
 		"connection-failed": "無法連接。",
 		"log-in": "登入",
 		"go-back": "返回"
-	}
+	},
+	"login-loading": "正在登入您的帳戶..."
 }

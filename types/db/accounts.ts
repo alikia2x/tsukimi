@@ -4,6 +4,7 @@ export interface StoredAccount {
 	host: string;
 	serverSoftware: "mastodon" | "misskey";
 	token: string;
+	activated: boolean;
 }
 
 export type StoredAccounts = StoredAccount[];

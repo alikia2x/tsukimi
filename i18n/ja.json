@@ -11,5 +11,6 @@
 		"connection-failed": "接続できませんでした",
 		"go-back": "戻る",
 		"log-in": "ログイン"
-	}
+	},
+	"login-loading": "アカウントにログインしています..."
 }

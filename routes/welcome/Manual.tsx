@@ -6,7 +6,7 @@ import anchor from "markdown-it-anchor";
 
 import { useEffect, useState } from "react";
 import LanguageSelector from "components/LanguageSelector";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react/dist/iconify.js";
 

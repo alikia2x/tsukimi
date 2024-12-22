@@ -5,8 +5,10 @@ import { Icon } from "@iconify/react";
 import consola from "consola";
 import { StoredAccount } from "types/db/accounts";
 import setAccount from "lib/db/accounts/setAccount";
+import { useTranslation } from "react-i18next";
 
 export default function MiAuthPage() {
+	const { t } = useTranslation();
 	const [searchParams] = useSearchParams();
 	const session = searchParams.get("session");
 	const domain = readSession();
@@ -29,7 +31,8 @@ export default function MiAuthPage() {
 					username: data.user.username,
 					host: domain,
 					serverSoftware: "misskey",
-					token: data.token
+					token: data.token,
+					activated: true
 				};
 				setAccount(newAccount);
 				location.pathname = "/home";
@@ -74,7 +77,7 @@ export default function MiAuthPage() {
 			<div>
 				<Icon icon="svg-spinners:ring-resize" className="text-4xl" />
 			</div>
-			<div>Loading your account...</div>
+			<div>{t("login-loading")}</div>
 		</div>
 	);
 }

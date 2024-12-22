@@ -11,5 +11,6 @@
 		"connection-failed": "NO SE PUDO CONECTAR",
 		"go-back": "Volver",
 		"log-in": "Inicia sesión"
-	}
+	},
+	"login-loading": "Iniciando sesión en su cuenta..."
 }

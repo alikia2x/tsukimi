@@ -11,5 +11,6 @@
 		"connection-failed": "IMPOSSIBLE DE SE CONNECTER",
 		"go-back": "Retourner",
 		"log-in": "Connexion"
-	}
+	},
+	"login-loading": "Connexion à votre compte..."
 }

@@ -15,5 +15,6 @@
 		"connection-failed": "COULD NOT CONNECT",
 		"log-in": "Log in",
 		"go-back": "Go back"
-	}
+	},
+	"login-loading": "Logging in to your account..."
 }
