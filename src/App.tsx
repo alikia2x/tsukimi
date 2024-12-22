@@ -4,7 +4,7 @@ import Homepage from "routes/Homepage.tsx";
 import MainPage from "routes/MainPage.tsx";
 import "i18n/init";
 import { useTranslation } from "react-i18next";
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet-async';
 import { WelcomePageRouteConfig } from "routes/welcome/config";
 
 const router = createBrowserRouter([
